@@ -25,6 +25,14 @@
 							<h1>Hi, I am William</h1>
 							<p>A personal trainer<br> with 4 years of experience</p>
 							<ul class="actions">
+								<label class="language-switcher" id="languageToggle">
+									<input type="checkbox">
+									<span class="slider round"></span>
+									<span class="select-fr">EN</span>
+									<span class="select-en">CH</span>
+								  </label>
+							</ul>
+							<ul class="actions">
 								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
 							</ul>
 						</header>
@@ -469,6 +477,14 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
   var popup = element.querySelector('.popuptext');
   popup.classList.toggle("show");
 }
+		document.addEventListener('DOMContentLoaded', function () {
+				var languageToggle = document.getElementById('languageToggle');
+
+				languageToggle.addEventListener('change', function () {
+					var newUrl = languageToggle.checked ? 'index-chinese.html' : 'index-chinese.html';
+					window.location.href = newUrl;
+				});
+			});
 				</script>
 
 		<!-- Scripts -->
